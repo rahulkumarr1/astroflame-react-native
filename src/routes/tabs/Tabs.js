@@ -18,7 +18,7 @@ function Feed() {
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Text>Profile!</Text>
         <Button title="Go back" onPress={() => navigation.goBack()} />
-        <Button title="Feed" onPress={() => navigation.navigate('Feed')} />
+        <Button title="HOME PAGE" onPress={() => navigation.navigate('Home')} />
       </View>
     );
   }

@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-// import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import Tabs from "./tabs/Tabs";
 import HomeScreen from "../screens/HomeScreen";
@@ -8,7 +8,7 @@ import ProductDetails from "../screens/ProductDetails";
 
 
 const Stack = createNativeStackNavigator();
-// const DrawerNav = createDrawerNavigator();
+const DrawerNav = createDrawerNavigator();
 
 function Login({ navigation }) {
     return (
@@ -16,6 +16,8 @@ function Login({ navigation }) {
             <Text>Login Page</Text>
             <Button onPress={() => navigation.navigate('Signup')}
                 title='Need an account?' />
+            <Button onPress={() => navigation.navigate('Homepage')}
+                title='Homepage' />
         </View>
     )
 }
@@ -81,21 +83,21 @@ function DetailsScreen({ navigation }) {
     );
 }
 
-// function Drawer() {
-//     return (
-//         <DrawerNav.Navigator>
-//             <DrawerNav.Screen name='Dashboard' component={Dashboard} />
-//             <DrawerNav.Screen name='Profile' component={Profile} />
-//             <DrawerNav.Screen name='Chat' component={Chat} />
-//         </DrawerNav.Navigator>
-//     )
-// }
+function Drawer() {
+    return (
+        <DrawerNav.Navigator>
+            <DrawerNav.Screen name='Dashboard' component={Dashboard} />
+            <DrawerNav.Screen name='Profile' component={Profile} />
+            <DrawerNav.Screen name='Chat' component={Chat} />
+        </DrawerNav.Navigator>
+    )
+}
 
 const Routes = () => {
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }} >
             <Stack.Screen name="Tabs" component={Tabs} />
-            <Stack.Screen name="Home" component={HomeScreen} />
+            <Stack.Screen name="Home" component={Drawer} />
             <Stack.Screen name="Details" component={DetailsScreen} />
             <Stack.Screen name='Login' component={Login} />
             <Stack.Screen name='Signup' component={Signup} />
