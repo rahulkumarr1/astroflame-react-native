@@ -1,37 +1,49 @@
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { ScrollView, Text, View, Button } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import ProductList from '../../components/ProductList';
+import ProductSlider from '../../components/ProductSlider';
+import ProductCarousel from '../../components/ProductCarousel';
 import HomeScreen from '../../screens/HomeScreen';
+import styles from '../../styles';
+function Feed({navigation}) {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      {/* <HomeScreen/>        */}
 
-function Feed() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <HomeScreen/>       
-      </View>
-    );
-  }
-  
-  function Profile({ navigation }) {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Profile!</Text>
-        <Button title="Go back" onPress={() => navigation.goBack()} />
-        <Button title="HOME PAGE" onPress={() => navigation.navigate('Home')} />
-      </View>
-    );
-  }
-  
-  function Notifications({ navigation }) {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Notifications!</Text>
-        <Button title="Go back" onPress={() => navigation.goBack()} />
-        <Button title="Profile" onPress={() => navigation.navigate('Profile')} />
-      </View>
-    );
-  }
+      <ScrollView style={{ paddingTop: 70 }}>
+        <Text style={styles.heading}>Explore</Text>    
+        <ProductCarousel navigation={navigation} />
+        <Text style={styles.heading}>Popular Products</Text>
+        <ProductSlider navigation={navigation} />
+        <Text style={styles.heading}>Top Picks For You</Text>
+        <ProductSlider navigation={navigation} />
+        <View style={{ height: 100 }}></View>
+      </ScrollView>  
+    </View>
+  );
+}
+
+function Profile({ navigation }) {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Profile!</Text>
+      <Button title="Go back" onPress={() => navigation.goBack()} />
+      <Button title="HOME PAGE" onPress={() => navigation.navigate('Home')} />
+    </View>
+  );
+}
+
+function Notifications({ navigation }) {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Notifications!</Text>
+      <Button title="Go back" onPress={() => navigation.goBack()} />
+      <Button title="Profile" onPress={() => navigation.navigate('Profile')} />
+    </View>
+  );
+}
 
 const Tab = createBottomTabNavigator();
 
@@ -89,10 +101,3 @@ const Tabs = ({ navigation, route }) => {
 }
 
 export default Tabs;
-
-const styles = StyleSheet.create({
-  tabIconStyle: {
-    width: 10,
-    height: 10,
-  },
-});
