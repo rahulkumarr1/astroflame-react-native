@@ -3,7 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import Tabs from "./tabs/Tabs";
-import HomeScreen from "../screens/HomeScreen";
+import Splash from "../screens/Splash";
 import ProductDetails from "../screens/ProductDetails";
 
 
@@ -95,7 +95,10 @@ function Drawer() {
 
 const Routes = () => {
     return (
-        <Stack.Navigator screenOptions={{ headerShown: false }} >
+        <Stack.Navigator
+            screenOptions={{ headerShown: false }}
+            initialRouteName="splash"  >
+            <Stack.Screen name="splash" component={Splash} />
             <Stack.Screen name="Tabs" component={Tabs} />
             <Stack.Screen name="Home" component={Drawer} />
             <Stack.Screen name="Details" component={DetailsScreen} />
