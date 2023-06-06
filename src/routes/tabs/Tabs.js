@@ -7,6 +7,7 @@ import ProductSlider from '../../components/ProductSlider';
 import ProductCarousel from '../../components/ProductCarousel';
 import HomeScreen from '../../screens/HomeScreen';
 import Profile from "../../screens/Profile";
+import Dashboard from "../../screens/Dashboard";
 import styles from '../../styles';
 
 function Feed({navigation}) {
@@ -34,6 +35,7 @@ function Notifications({ navigation }) {
       <Button title="Go back" onPress={() => navigation.goBack()} />
       <Button title="Profile" onPress={() => navigation.navigate('Profile')} />
       <Button title="Login" onPress={() => navigation.navigate('Login')} />
+      <Button title="Home" onPress={() => navigation.navigate('Home')} />
     </View>
   );
 }

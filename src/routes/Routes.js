@@ -13,28 +13,6 @@ import Signup from "../screens/Signup";
 const Stack = createNativeStackNavigator();
 const DrawerNav = createDrawerNavigator();
 
-// function Login({ navigation }) {
-//     return (
-//         <View style={styles.container}>
-//             <Login/>
-//             <Button onPress={() => navigation.navigate('Signup')}
-//                 title='Need an account?' />
-//             <Button onPress={() => navigation.navigate('Homepage')}
-//                 title='Homepage' />
-//         </View>
-//     )
-// }
-
-// function Signup({ navigation }) {
-//     return (
-//         <View style={styles.container}>
-//             <Text>Login Page</Text>
-//             <Button onPress={() => navigation.navigate('Tab')}
-//                 title='Need To Login?' />
-//         </View>
-//     )
-// }
-
 function Dashboard({ navigation }) {
     return (
         <View style={styles.container}>
@@ -82,6 +60,7 @@ function Drawer() {
     return (
         <DrawerNav.Navigator>
             <DrawerNav.Screen name='Dashboard' component={Dashboard} />
+            <DrawerNav.Screen name='Home' component={Tabs} screenOptions={{ headerShown: false }} />
             <DrawerNav.Screen name='Profile' component={Profile} />
             <DrawerNav.Screen name='Chat' component={Chat} />
         </DrawerNav.Navigator>
