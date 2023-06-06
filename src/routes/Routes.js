@@ -5,32 +5,35 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import Tabs from "./tabs/Tabs";
 import Splash from "../screens/Splash";
 import ProductDetails from "../screens/ProductDetails";
+import Profile from "../screens/Profile";
+import Login from "../screens/Login";
+import Signup from "../screens/Signup";
 
 
 const Stack = createNativeStackNavigator();
 const DrawerNav = createDrawerNavigator();
 
-function Login({ navigation }) {
-    return (
-        <View style={styles.container}>
-            <Text>Login Page</Text>
-            <Button onPress={() => navigation.navigate('Signup')}
-                title='Need an account?' />
-            <Button onPress={() => navigation.navigate('Homepage')}
-                title='Homepage' />
-        </View>
-    )
-}
+// function Login({ navigation }) {
+//     return (
+//         <View style={styles.container}>
+//             <Login/>
+//             <Button onPress={() => navigation.navigate('Signup')}
+//                 title='Need an account?' />
+//             <Button onPress={() => navigation.navigate('Homepage')}
+//                 title='Homepage' />
+//         </View>
+//     )
+// }
 
-function Signup({ navigation }) {
-    return (
-        <View style={styles.container}>
-            <Text>Login Page</Text>
-            <Button onPress={() => navigation.navigate('Tab')}
-                title='Need To Login?' />
-        </View>
-    )
-}
+// function Signup({ navigation }) {
+//     return (
+//         <View style={styles.container}>
+//             <Text>Login Page</Text>
+//             <Button onPress={() => navigation.navigate('Tab')}
+//                 title='Need To Login?' />
+//         </View>
+//     )
+// }
 
 function Dashboard({ navigation }) {
     return (
@@ -45,14 +48,6 @@ function Setting() {
     return (
         <View style={styles.container}>
             <Text>Settings Page</Text>
-        </View>
-    )
-}
-
-function Profile() {
-    return (
-        <View style={styles.container}>
-            <Text>Profile Page</Text>
         </View>
     )
 }
@@ -103,7 +98,7 @@ const Routes = () => {
             <Stack.Screen name="Home" component={Drawer} />
             <Stack.Screen name="Details" component={DetailsScreen} />
             <Stack.Screen name='Login' component={Login} />
-            <Stack.Screen name='Signup' component={Signup} />
+            <Stack.Screen name='signup' component={Signup} />
             <Stack.Screen name='ProductDetails' component={ProductDetails} />
         </Stack.Navigator>
     );

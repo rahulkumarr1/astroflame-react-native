@@ -12,8 +12,7 @@ const styles = StyleSheet.create({
 
   heading: {
     marginVertical: 10,
-    marginHorizontal: 20,
-    fontFamily: 'Poppins-SemiBold',
+    marginHorizontal: 20,    
     fontSize: 24,
     color: '#21282F',
   },
@@ -86,8 +85,7 @@ const styles = StyleSheet.create({
 
   headerText: {
     color: '#000',
-    fontSize: 20,
-    fontFamily: 'Poppins-Bold',
+    fontSize: 20,    
     marginTop: 5,
   },
 
@@ -114,14 +112,13 @@ const styles = StyleSheet.create({
   categoryText: {
     fontSize: 16,
     color: '#A2A0A1',
-    fontFamily: 'Poppins-Regular',
+    
     paddingHorizontal: 15,
   },
 
   categoryTextSelected: {
     fontSize: 16,
-    color: '#fff',
-    fontFamily: 'Poppins-SemiBold',
+    color: '#fff',    
     backgroundColor: PrimaryColor,
     paddingHorizontal: 20,
     borderRadius: 5,
@@ -151,11 +148,11 @@ const styles = StyleSheet.create({
   },
 
   sliderText: {
-    fontFamily: 'Poppins-SemiBold',
+    
   },
 
   sliderPrice: {
-    fontFamily: 'Poppins-Regular',
+    
   },
 
   productBtn: {
@@ -172,8 +169,7 @@ const styles = StyleSheet.create({
   },
 
   productText: {
-    color: '#fff',
-    fontFamily: 'Poppins-Regular',
+    color: '#fff',  
     fontSize: 16,
   },
 
@@ -186,8 +182,7 @@ const styles = StyleSheet.create({
     top: 20,
   },
 
-  searchText: {
-    fontFamily: 'Poppins-Regular',
+  searchText: {  
     margin: 20,
     marginBottom: 0,
     fontSize: 16,
@@ -250,15 +245,13 @@ const styles = StyleSheet.create({
   cartName: {
     marginLeft: 5,
     fontSize: 16,
-    color: '#000',
-    fontFamily: 'Poppins-SemiBold',
+    color: '#000',    
   },
 
   cartPrice: {
     marginLeft: 5,
     fontSize: 14,
-    color: '#000',
-    fontFamily: 'Poppins-Regular',
+    color: '#000',   
   },
 
   wishlistItem: {
@@ -274,7 +267,7 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     fontSize: 16,
     color: '#000',
-    fontFamily: 'Poppins-SemiBold',
+    
     width: '80%',
   },
 
@@ -282,7 +275,7 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     fontSize: 14,
     color: '#000',
-    fontFamily: 'Poppins-Regular',
+    
   },
 
   cartQuantity: {
@@ -320,7 +313,7 @@ const styles = StyleSheet.create({
   },
 
   menuText: {
-    fontFamily: 'Poppins-SemiBold',
+    
     color: '#000',
     marginLeft: 10,
     flex: 1,
@@ -332,7 +325,7 @@ const styles = StyleSheet.create({
   },
 
   profileName: {
-    fontFamily: 'Poppins-Regular',
+    
     fontSize: 20,
     color: '#000',
   },
@@ -358,11 +351,11 @@ const styles = StyleSheet.create({
   },
 
   switchText: {
-    fontFamily: 'Poppins-Regular',
+    
   },
 
   switchTextSelected: {
-    fontFamily: 'Poppins-SemiBold',
+    
     color: '#000',
   },
 
@@ -375,17 +368,17 @@ const styles = StyleSheet.create({
   },
 
   orderNo: {
-    fontFamily: 'Poppins-SemiBold',
+    
     color: '#000',
     fontSize: 16,
   },
 
   orderItemCount: {
-    fontFamily: 'Poppins-Regular',
+    
   },
 
   orderDate: {
-    fontFamily: 'Poppins-Regular',
+    
     fontStyle: 'italic',
   },
   tabIconStyle: {

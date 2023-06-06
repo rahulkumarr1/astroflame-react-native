@@ -27,8 +27,7 @@ const ProductCarousel = ({ navigation }) => {
     try {
       const response = await fetch('https://fakestoreapi.com/products');
       const json = await response.json();
-      setData(json);
-      console.log(json);
+      setData(json);   
     } catch (error) {
       console.error(error);
     } finally {

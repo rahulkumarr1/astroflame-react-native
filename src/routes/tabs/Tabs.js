@@ -6,7 +6,9 @@ import ProductList from '../../components/ProductList';
 import ProductSlider from '../../components/ProductSlider';
 import ProductCarousel from '../../components/ProductCarousel';
 import HomeScreen from '../../screens/HomeScreen';
+import Profile from "../../screens/Profile";
 import styles from '../../styles';
+
 function Feed({navigation}) {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -16,21 +18,11 @@ function Feed({navigation}) {
         <Text style={styles.heading}>Explore</Text>    
         <ProductCarousel navigation={navigation} />
         <Text style={styles.heading}>Popular Products</Text>
-        <ProductSlider navigation={navigation} />
+        {/* <ProductSlider navigation={navigation} /> */}
         <Text style={styles.heading}>Top Picks For You</Text>
-        <ProductSlider navigation={navigation} />
+        {/* <ProductSlider navigation={navigation} /> */}
         <View style={{ height: 100 }}></View>
       </ScrollView>  
-    </View>
-  );
-}
-
-function Profile({ navigation }) {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Profile!</Text>
-      <Button title="Go back" onPress={() => navigation.goBack()} />
-      <Button title="HOME PAGE" onPress={() => navigation.navigate('Home')} />
     </View>
   );
 }
@@ -41,6 +33,7 @@ function Notifications({ navigation }) {
       <Text>Notifications!</Text>
       <Button title="Go back" onPress={() => navigation.goBack()} />
       <Button title="Profile" onPress={() => navigation.navigate('Profile')} />
+      <Button title="Login" onPress={() => navigation.navigate('Login')} />
     </View>
   );
 }
