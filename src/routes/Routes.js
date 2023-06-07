@@ -60,7 +60,7 @@ function Drawer() {
     return (
         <DrawerNav.Navigator>
             <DrawerNav.Screen name='Dashboard' component={Dashboard} />
-            <DrawerNav.Screen name='Home' component={Tabs} screenOptions={{ headerShown: false }} />
+            <DrawerNav.Screen name='Main' component={Tabs} screenOptions={{ headerShown: false }} />
             <DrawerNav.Screen name='Profile' component={Profile} />
             <DrawerNav.Screen name='Chat' component={Chat} />
         </DrawerNav.Navigator>

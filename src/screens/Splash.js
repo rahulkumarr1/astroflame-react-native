@@ -1,7 +1,7 @@
 import { StyleSheet, Image, View } from "react-native";
 import React, { useEffect } from "react";
 import colors from '../constants/Colors';
-import logo from "../../assets/logo/logo.png";
+import logo from "../../assets/logo/logo.jpg";
 
 
 const Splash = ({ navigation }) => {

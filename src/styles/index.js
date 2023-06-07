@@ -209,7 +209,7 @@ const styles = StyleSheet.create({
   searchBtn: {
     position: 'absolute',
     right: 0,
-    paddingVertical: 15,
+    paddingVertical: 0,
     paddingHorizontal: 25,
   },
 
